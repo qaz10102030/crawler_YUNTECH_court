@@ -10,7 +10,7 @@ var db = new mongodb.Db('yuntech', mongodbServer);
 var time = '1061009-1061015'
 
 db.open(function() {
-    db.collection('court').find({},{_id:false,id:false}).toArray(function(err,result) {
+    db.collection('court_table').find({},{_id:false,id:false}).toArray(function(err,result) {
         if(err) throw err;
             for(var i = 0;i<result[0].sheet.length;i++){
                 if(result[0].sheet[i].text == time){
